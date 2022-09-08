@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 import app.models
-from routers import posts, users, auth, vote
+from app.routers import posts, users, auth, vote
 from database import engine, SessionLocal
 app = FastAPI()
 

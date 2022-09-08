@@ -8,3 +8,4 @@ python_jose==3.3.0
 SQLAlchemy==1.4.31
 uvicorn==0.17.6
 pydantic[email]
+python-multipart

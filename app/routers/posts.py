@@ -5,7 +5,7 @@ from sqlalchemy import func
 from app import oauth2 
 #sys.path.append('../..')
 
-import  models, schema
+from app import  models, schema
 from sqlalchemy.orm import Session
 from database import get_db
 

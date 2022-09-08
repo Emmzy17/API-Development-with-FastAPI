@@ -7,7 +7,7 @@ from app import oauth2
 
 from app import  models, schema
 from sqlalchemy.orm import Session
-from database import get_db
+from app.database import get_db
 
 router =  APIRouter(
     prefix='/posts',

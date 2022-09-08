@@ -2,7 +2,7 @@ from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
 from typing import List, Optional
 from sqlalchemy import func 
 #import sys
-import oauth2
+from app import oauth2 
 #sys.path.append('../..')
 
 import  models, schema

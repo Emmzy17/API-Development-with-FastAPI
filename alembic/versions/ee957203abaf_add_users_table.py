@@ -20,9 +20,9 @@ def upgrade():
     op.create_table(
         'users', 
         sa.Column('id', sa.Integer(), nullable=False),
-        sa.Column('email',sa.String(), nullable=False, unique=True),
-        sa.Column('password',sa.String(), nullable=False),
-        sa.Column('created_at',sa.TIMESTAMP(timezone=True), nullable= False, server_default =sa.text('now()')),
+        sa.Column('email', sa.String(), nullable=False),
+        sa.Column('password', sa.String(), nullable=False),
+        sa.Column('created_at', sa.TIMESTAMP(timezone=True), nullable=False, server_default=sa.text('NOW()')),
         sa.PrimaryKeyConstraint('id'),
         sa.UniqueConstraint('email')
     )

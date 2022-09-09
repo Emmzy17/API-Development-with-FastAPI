@@ -17,11 +17,11 @@ depends_on = None
 
 
 def upgrade():
-    op.create_table('')
+
     op.add_column('posts', sa.Column('owner_id', sa.Integer(), nullable=False))
     op.create_foreign_key('post_users_fk', source_table="posts", referent_table="users", 
                             local_cols=['owner_id'], remote_cols=['id'], ondelete="CASCADE"
-    )
+)
 
 
 def downgrade():

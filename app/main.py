@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -26,6 +26,10 @@ def get_db():
         yield db
     finally:
         db.close()
+
+@app.get('/', status_code=status.HTTP_200_OK)
+def root():
+    return {'message': 'Check out the docs to  see how to work with the Api @ \docs'}
 
 
 
